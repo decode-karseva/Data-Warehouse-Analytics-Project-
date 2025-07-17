@@ -69,7 +69,7 @@ The database follows a star schema model and contains:
 
 ---
 
-## 🛠 Tools Used
+## Tools Used
 
 - **SQL Engine**: MySQL Server 8.0
 - **Interface**: MySQL Workbench
