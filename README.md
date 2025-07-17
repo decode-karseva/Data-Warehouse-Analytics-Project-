@@ -1,4 +1,4 @@
-# SQL Data Warehouse Analytics Project
+# SQL Data Warehouse Analytics Project (MySQL)
 
 ##  Overview
 
