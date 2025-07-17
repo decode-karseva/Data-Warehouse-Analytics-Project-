@@ -77,5 +77,7 @@ The database follows a star schema model and contains:
 
 ---
 
-## Project Structure
+## Acknowledgements
+This project is heavily inspired by and built upon concepts learned from the Data With Baraa YouTube channel and learning resources.
+Special thanks to Baraa for simplifying complex data analytics concepts and providing real-world SQL projects for learners.
 
