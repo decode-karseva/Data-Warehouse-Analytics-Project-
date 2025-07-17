@@ -1,80 +1,81 @@
-# 📊 Data Warehouse Analytics Project (SQL-Based)
+# 📊 SQL Data Warehouse Analytics Project
 
 ## 🔍 Overview
 
-This project presents a structured data analysis pipeline using SQL on a simulated data warehouse. The dataset consists of a typical star schema with fact and dimension tables. The goal is to extract meaningful insights from transactional sales data through querying, exploration, and reporting.
+This project involves a structured analysis of sales data using SQL on a data warehouse designed with a **star schema**. The goal is to derive key business insights by exploring, querying, and summarizing transactional data. The focus is on sales performance, customer behavior, and product categorization.
 
 ---
 
 ## 🧱 Database Structure
 
-The database is designed following a **star schema**:
+The database follows a star schema model and contains:
 
 - **Fact Table:**
-  - `gold.fact_sales`: Stores transactional-level data including sales amount, product key, customer key, and date fields.
+  - `gold.fact_sales`: Core transactional data including order details, sales amount, quantity, product/customer keys, and date fields.
 
 - **Dimension Tables:**
-  - `gold.dim_products`: Product metadata such as name, category, and subcategory.
-  - `gold.dim_customers`: Customer information including demographics and geography.
-  - `gold.dim_date`: Calendar table for time-based analysis.
+  - `gold.dim_products`: Metadata on products including name, category, and subcategory.
+  - `gold.dim_customers`: Customer demographic and geographic information.
 
 ---
 
 ## 🎯 Objectives
 
-1. **Explore** the structure of the data warehouse.
-2. **Analyze** temporal patterns in order placements and customer age distribution.
-3. **Rank** products and customers based on sales and order activity.
-4. **Extract** key business insights using SQL window functions and aggregation logic.
+1. Explore and understand the structure and content of the database.
+2. Perform temporal and categorical analysis using SQL.
+3. Rank and evaluate customers and products based on sales metrics.
+4. Apply SQL functions to answer business-driven analytical questions.
 
 ---
 
 ## 📌 Key Analyses & Queries
 
-### 1. **Database Exploration**
-- Listing all tables and columns using `INFORMATION_SCHEMA`.
+### 1. **Database Metadata Exploration**
+- List all tables using `INFORMATION_SCHEMA.TABLES`.
+- Inspect column-level metadata with `INFORMATION_SCHEMA.COLUMNS`.
 
-### 2. **Date-Based Analysis**
-- Calculating the time range between first and last order.
-- Determining the age of oldest and youngest customers using `DATEDIFF`.
+### 2. **Dimension Exploration**
+- Extract unique countries from customer data.
+- List all product categories, subcategories, and product names.
 
-### 3. **Dimension Exploration**
-- Listing unique product categories and customer countries.
+### 3. **Date-Based Exploration**
+- Determine the range of sales orders (first vs last).
+- Filter out invalid dates (`'0000-00-00'`) to avoid strict mode errors.
 
-### 4. **Ranking & Performance**
-- Top 5 products by revenue using `RANK()` and aggregate functions.
-- Bottom 5 products and least active customers using `COUNT(DISTINCT ...)` and sorting.
+### 4. **Customer Age Profiling**
+- Identify the oldest and youngest customers using `MIN()` and `MAX()` on `birthdate`.
+
+### 5. **Performance Ranking**
+- Identify top-performing products using `RANK()` and `SUM(sales_amount)`.
+- Find the least active customers or products based on order count.
 
 ---
 
-## ⚙️ SQL Features & Techniques Used
+## ⚙️ SQL Features Used
 
-- **Joins** (`INNER JOIN`, `LEFT JOIN`)
+- **JOINs** (inner and left joins)
 - **Aggregation** (`SUM`, `COUNT`, `AVG`)
 - **Window Functions** (`RANK`, `ROW_NUMBER`)
-- **Filtering & Sorting** (`WHERE`, `ORDER BY`, `GROUP BY`)
-- **Information Schema Queries** to explore metadata
-- **Date Calculations** using `DATEDIFF`, `MIN()`, `MAX()`
+- **Filtering** and **Grouping**
+- **Date calculations** with `MIN()`, `MAX()`, and `DATEDIFF` (or manual logic for MySQL)
 
 ---
 
 ## 💡 Sample Insights
 
-- Identified top-grossing products by analyzing revenue distribution.
-- Ranked customers based on total revenue and number of distinct orders.
-- Explored customer base by age and geography.
-- Assessed order volume over time and potential seasonality (where applicable).
+- Products in specific categories consistently outperform others in revenue.
+- A small subset of customers accounts for a large portion of total sales.
+- There are irregularities in order dates that need cleansing before analysis.
 
 ---
 
 ## 🛠️ Tools Used
 
-- **Database**: MySQL Server 8.0
-- **Query Editor**: MySQL Workbench
+- **SQL Engine**: MySQL Server 8.0
+- **Interface**: MySQL Workbench
 - **Data Format**: CSV files (imported via GUI)
 
 ---
 
-## 📁 Project Folder Structure
-
+## 📁 Project Structure
 
