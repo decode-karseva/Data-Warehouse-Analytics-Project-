@@ -1,12 +1,12 @@
-# 📊 SQL Data Warehouse Analytics Project
+# SQL Data Warehouse Analytics Project
 
-## 🔍 Overview
+##  Overview
 
 This project involves a structured analysis of sales data using SQL on a data warehouse designed with a **star schema**. The goal is to derive key business insights by exploring, querying, and summarizing transactional data. The focus is on sales performance, customer behavior, and product categorization.
 
 ---
 
-## 🧱 Database Structure
+##  Database Structure
 
 The database follows a star schema model and contains:
 
@@ -19,7 +19,7 @@ The database follows a star schema model and contains:
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 1. Explore and understand the structure and content of the database.
 2. Perform temporal and categorical analysis using SQL.
@@ -28,7 +28,7 @@ The database follows a star schema model and contains:
 
 ---
 
-## 📌 Key Analyses & Queries
+##  Key Analyses & Queries
 
 ### 1. **Database Metadata Exploration**
 - List all tables using `INFORMATION_SCHEMA.TABLES`.
@@ -51,7 +51,7 @@ The database follows a star schema model and contains:
 
 ---
 
-## ⚙️ SQL Features Used
+##  SQL Features Used
 
 - **JOINs** (inner and left joins)
 - **Aggregation** (`SUM`, `COUNT`, `AVG`)
@@ -61,7 +61,7 @@ The database follows a star schema model and contains:
 
 ---
 
-## 💡 Sample Insights
+##  Sample Insights
 
 - Products in specific categories consistently outperform others in revenue.
 - A small subset of customers accounts for a large portion of total sales.
@@ -69,7 +69,7 @@ The database follows a star schema model and contains:
 
 ---
 
-## 🛠️ Tools Used
+## 🛠 Tools Used
 
 - **SQL Engine**: MySQL Server 8.0
 - **Interface**: MySQL Workbench
@@ -77,5 +77,5 @@ The database follows a star schema model and contains:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
